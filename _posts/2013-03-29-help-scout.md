@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Call Tracking Metrics
+title: Help Scout
 categories: integrations
-author: Eric Fung and Nemo Chu
-summary: Import data from Call Tracking Metrics into KISSmetrics.
+author: Nemo Chu
+summary: Import data from Help Scout into KISSmetrics.
 published: false
 ---
-[Call Tracking Metrics][ctm] provides trackable phone numbers for your marketing campaigns. Imagine this scenario:
+[Help Scout][help-scout] provides trackable phone numbers for your marketing campaigns. Imagine this scenario:
 
 *You place multiple ads in the Wall Street Journal, and you list a unique phone number for each ad, all of which forward to your sales team.*
 
@@ -99,7 +99,7 @@ Call Tracking Metrics provides an area to add notes about the caller. They provi
 
 Entering an email address aliases the email to the caller's phone number, so that events registered under either ID will represent the same person in KISSmetrics. This is key in tying together the call information you receive from this integration to the existing data you already collect online in KISSmetrics.
 
-[ctm]: https://calltrackingmetrics.com/
+[help-scout]: https://www.helpscout.net
 [callcode]: http://en.wikipedia.org/wiki/List_of_country_calling_codes
 [km-settings]: https://calltrackingmetrics.com/accounts/kissmetrics_settings
 
