@@ -107,14 +107,17 @@ For example, you might have a invite link you want to track:
 Notice that the code uses the `id` attribute from the link (`invite_link`). You can also pass in an `Element` object instead of the `id`. You can also track all the clicks on any element for a given CSS class by prepending a the CSS class with a `.`. For example, if you want to track clicks an any element with the CSS class `play_button` you can do:
 
     // EXAMPLE 2
-    _kmq.push(['trackClick', '.play_button', 'Play Button Clicked']);
+    <script>
+      _kmq.push(['trackClick', '.play_button', 'Play Button Clicked']);
+    </script>
 
 This method will work on buttons, `<div>`s, links, images, or any other HTML element. It will still fire all of your existing `onclick` events. You can also pass in properties via an additional argument:
 
-    _kmq.push(['trackClick', 'invite_link', 'Invite Friends Clicked', {
-      'color':'red'
-    }]);
-    
+    <script>
+      _kmq.push(['trackClick', 'invite_link', 'Invite Friends Clicked', {
+        'color':'red'
+      }]);
+    </script>
 
 <a name="tracking-outbound-link-clicks-trackclickonoutboundlink"></a>
 ## Tracking Outbound Link Clicks - `trackClickOnOutboundLink`
@@ -157,15 +160,19 @@ For example, you might have a signup form you want to track:
 
 Notice that the code uses the `id` attribute from the form (`signup_form`). You can also pass in an `Element` object instead of the `id`. You can also track all the form submissions for all forms with a given CSS class by prepending a the CSS class with a `.`. For example, if you want to track form submits an any form with the CSS class `invite_form` you can do:
 
-    _kmq.push(['trackSubmit', '.invite_form', 'Invite Form Submitted']);
+    <script>
+      _kmq.push(['trackSubmit', '.invite_form', 'Invite Form Submitted']);
+    </script>
 
 It will still fire all of your existing `onsubmit` events. 
 
 You can also pass in properties via an additional argument:
 
-    _kmq.push(['trackSubmit', 'signup_form', 'Sign Up Form Submitted', {
-      'variation': 'single page'
-    }]);
+    <script>
+      _kmq.push(['trackSubmit', 'signup_form', 'Sign Up Form Submitted', {
+        'variation': 'single page'
+      }]);
+    </script>
 
 *Note: our code does not validate the contents of the form. If a visitor fills out a form incorrectly and submits it, we will* **still** *count that as a submit event. Certain events like Signups could be tracked more accurately by recording the event on the following page, or using a server-side library to record the event when an entry is created in your database.*
 
@@ -261,9 +268,9 @@ The function `KM.i()` will return the visitor's KISSmetrics ID, in case you need
 Remember to wrap this in a [callback function][callback] to ensure the JavaScript library has loaded before you try to fetch this information:
 
     <script type="text/javascript">
-    _kmq.push(function()
-      { alert(KM.i()) } // Display an alert box with your current KM identity
-    );
+      _kmq.push(function()
+        { alert(KM.i()) } // Display an alert box with your current KM identity
+      );
     </script>
 
 [common]: /apis/common-methods
